@@ -1,0 +1,2 @@
+/home/ics45c/projects/project4/bin/CMakeFiles/a.out.dir
+/home/ics45c/projects/project4/bin/CMakeFiles/a.out.test.dir

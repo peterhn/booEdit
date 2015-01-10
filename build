@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+SCRIPT_DIR=$(readlink -m $(dirname $0))
+
+
+if [ ! -e $SCRIPT_DIR/bin ]; then
+    mkdir $SCRIPT_DIR/bin
+fi
+
+
+cd $SCRIPT_DIR/bin
+cmake ..
+
+
+if [ $? -eq 0 ]; then
+    make
+fi
+

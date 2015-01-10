@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+SCRIPT_DIR=$(readlink -m $(dirname $0))
+
+$SCRIPT_DIR/require_built
+
+
+if [ $? -eq 0 ]; then
+    cd $SCRIPT_DIR/bin
+    ./a.out
+fi
+

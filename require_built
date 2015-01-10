@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+SCRIPT_DIR=$(readlink -m $(dirname $0))
+
+
+if [ -e $SCRIPT_DIR/bin/a.out ] && [ -e $SCRIPT_DIR/bin/a.out.test ]; then
+    exit 0
+else
+    echo "Project not built successfully.  Make sure you run this command"
+    echo "successfully first:"
+    echo
+    echo "    ./build"
+    echo
+    exit 1
+fi
+

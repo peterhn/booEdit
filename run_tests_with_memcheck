@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+SCRIPT_DIR=$(readlink -m $(dirname $0))
+
+$SCRIPT_DIR/require_built
+
+if [ $? -ne -0 ]; then
+    exit 1
+fi
+
+
+cd $SCRIPT_DIR/bin
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-origins=yes ./a.out.test
+
